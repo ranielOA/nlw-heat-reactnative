@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ScrollView } from 'react-native';
-// import { api } from '../../services/api';
+import { api } from '../../services/api';
 // import { io } from 'socket.io-client';
 
 import { MESSAGES_EXAMPLE } from '../../utils/messages';
@@ -20,14 +20,14 @@ let messagesQueue: MessageProps[] = MESSAGES_EXAMPLE;
 export function MessageList() {
   const [currentMessages, setCurrentMessages] = useState<MessageProps[]>([]);
 
-  // useEffect(() => {
-  //   async function fetchMessages() {
-  //     const messagesResponse = await api.get<MessageProps[]>('/messages/last3');
-  //     setCurrentMessages(messagesResponse.data);
-  //   }
+  useEffect(() => {
+    async function fetchMessages() {
+      const messagesResponse = await api.get<MessageProps[]>('/messages/last3');
+      setCurrentMessages(messagesResponse.data);
+    }
 
-  //   fetchMessages();
-  // }, [])
+    fetchMessages();
+  }, []);
 
   // useEffect(() => {
   //   const timer = setInterval(() => {
