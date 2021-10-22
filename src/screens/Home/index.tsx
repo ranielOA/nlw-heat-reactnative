@@ -2,7 +2,7 @@ import React from 'react';
 import { View, KeyboardAvoidingView, Platform } from 'react-native';
 
 import { Header } from '../../componentes/Header';
-// import { MessageList } from '../../components/MessageList';
+import { MessageList } from '../../componentes/MessageList';
 // import { SignInBox } from '../../components/SignInBox';
 // import { SendMessageForm } from '../../components/SendMessageForm';
 
@@ -20,7 +20,7 @@ export function Home() {
     >
       <View style={styles.container}>
         <Header />
-        {/* <MessageList /> */}
+        <MessageList />
 
         {/* {user ? <SendMessageForm /> : <SignInBox />} */}
       </View>
