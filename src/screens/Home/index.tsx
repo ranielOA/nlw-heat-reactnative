@@ -3,7 +3,7 @@ import { View, KeyboardAvoidingView, Platform } from 'react-native';
 
 import { Header } from '../../componentes/Header';
 import { MessageList } from '../../componentes/MessageList';
-// import { SignInBox } from '../../components/SignInBox';
+import { SignInBox } from '../../componentes/SignInBox';
 // import { SendMessageForm } from '../../components/SendMessageForm';
 
 // import { useAuth } from '../../hooks/auth';
@@ -22,6 +22,7 @@ export function Home() {
         <Header />
         <MessageList />
 
+        <SignInBox />
         {/* {user ? <SendMessageForm /> : <SignInBox />} */}
       </View>
     </KeyboardAvoidingView>
